@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Card</title>
+  <style>
+/* Reset and global settings */
+/* Reset and global settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  color: white; /* Light text for contrast */
+}
+
+/* Card container */
+.card {
+  background-color: #1f1f1f; /* Dark card background */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  max-width: 90%;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Picture */
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #333; /* Dark border around image */
+  transition: border-color 0.3s ease;
+}
+
+/* Profile image hover effect */
+.profile-pic img:hover {
+  border-color: #fff; /* Lighten border on hover */
+}
+
+/* User Info */
+.user-info {
+  padding: 10px;
+}
+
+/* Name Styling */
+.user-info h2 {
+  font-size: 1.6em;
+  color: #fff; /* White text for name */
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* User details text */
+.user-detail {
+  font-size: 1em;
+  color: #ccc; /* Light grey text for other details */
+  margin: 8px 0;
+}
+
+/* Strong tags for labels */
+.user-detail strong {
+  color: #fff; /* White for labels */
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .card {
+    width: 280px;
+  }
+  .user-info h2 {
+    font-size: 1.4em;
+  }
+  .user-detail {
+    font-size: 0.9em;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="card" id="userCard">
+    <div class="profile-pic">
+        <img src="" alt="User Profile" id="profilePic">
+      </div>
+    <div class="user-info">
+      <h2 id="name">Username</h2>
+      <p class="user-detail"><strong>Country:</strong> <span id="location"></span></p>
+      <p class="user-detail"><strong>Age:</strong> <span id="age"></span></p>
+      <p class="user-detail"><strong>Contact:</strong> <span id="contact"></span></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
